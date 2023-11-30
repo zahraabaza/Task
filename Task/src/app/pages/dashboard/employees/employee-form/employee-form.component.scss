@@ -1,0 +1,40 @@
+input, select {
+  border: 1px solid #ccc;
+  // border-radius: 50px;
+  // padding: 17px;
+  margin: 5px;
+  /* padding-top: 0; */
+}
+
+input[type="date"]:before {
+  color: lightgrey;
+  content: attr(placeholder) !important;
+  margin-right: 0.5em;
+}
+
+input[type="date"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control.is-invalid:focus, .ng-invalid.ng-touched:focus{
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.3125rem) center;
+  background-size: calc(0.75em + 0.625rem) calc(0.75em + 0.625rem);
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched{
+  box-shadow: 0 0 4px 0 red;
+}
+
+
+.form-check-input:checked {
+  background-color: cornflowerblue;
+  border-color: cornflowerblue;
+}
+
+/* input[type="date"]:focus:before {
+  content: '' !important;
+} */

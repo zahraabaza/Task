@@ -1,0 +1,34 @@
+
+{
+  "employee":{
+    "name": "name",
+    "phone": "phone",
+    "mobile": "mobile",
+    "hireDate": "hire date",
+    "active": "active",
+    "position": "position",
+    "Id": "employee ID",
+    "departmentId": "department Id",
+    "add": "add"
+  },
+  "department":{
+    "name": "name",
+    "details": "details",
+    "order": "order"
+  },
+  "form":{
+    "save": "save",
+    "cancel": "cancel",
+    "options": "options",
+    "delete": "delete",
+    "more": "more details",
+    "edit": "edit"
+  },
+  "nav":{
+    "language": "languages",
+    "arabic": "arabic",
+    "english": "english",
+    "departments": "departments",
+    "employees": "employees"
+  }
+}

@@ -1,0 +1,61 @@
+<app-card>
+  <div class="card-content">
+    <div>
+      <button class="btn btn-info text-light" (click)="modal.show()" (click)="shared.initForm()">{{'employee.add' | translate}}</button>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">{{'employee.Id' | translate}}</th>
+          <th scope="col">{{'employee.name' | translate}}</th>
+          <th scope="col">{{'employee.mobile' | translate}}</th>
+          <th scope="col">{{'employee.phone' | translate}}</th>
+          <th scope="col">{{'employee.hireDate' | translate}}</th>
+          <th scope="col">{{'employee.position' | translate}}</th>
+          <th scope="col">{{'form.options' | translate}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of list |
+          paginate: { itemsPerPage: 10, currentPage: p }; index as i;">
+          <td>{{i+1}}</td>
+          <td>{{row.employeeIdentification || "--"}}</td>
+          <td>{{row.name || "--"}}</td>
+          <td>{{row.mobile || "--"}}</td>
+          <td>{{row.phone || "--"}}</td>
+          <td>{{row.hireDate | date:'yyyy-MM-dd'}}</td>
+          <td>{{row.position || "--"}}</td>
+          <td (click)="GetRow(row)">
+            <i class="fa-regular fa-pen-to-square m-2" (click)="modal.show()"></i>
+            <i class="fa-regular fa-trash-can m-2" (click)="deleteModal.show()"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- pagination -->
+    <div class="d-flex justify-content-center " *ngIf="list.length">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+
+    <app-modal #modal>
+      <div class="app-modal-body">
+        <app-employee-form [modal]="modal"></app-employee-form>
+      </div>
+    </app-modal>
+
+    <app-modal #deleteModal>
+      <div class="app-modal-body">
+        <p class="text-center">
+          {{'form.delete' | translate}}
+        </p>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-info text-light" (click)="Del()" (click)="deleteModal.hide()">{{'form.save' | translate}}</button>
+          <button class="btn btn-secondary" (click)="deleteModal.hide()">{{'form.cancel' | translate}}</button>
+        </div>
+      </div>
+    </app-modal>
+</div>
+</app-card>

@@ -1,0 +1,28 @@
+
+<div class="content">
+  <div>
+    <button class="btn btn-info text-light" (click)="shared.initForm()" (click)="modal.show()">{{'employee.add' | translate}}</button>
+  </div>
+
+  <div class="row">
+    <div class="flip-card col-12 col-md-6 col-lg-3 mt-3" *ngFor="let row of list">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          {{row.name}}
+        </div>
+        <div class="flip-card-back">
+          <p>{{row.details}}</p>
+          <div class="card-footer">
+            <button type="button" class="btn btn-light text-info" (click)="shared.initForm(row)" (click)="modal.show()">{{'form.more' | translate}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modal #modal>
+  <div class="app-modal-body">
+    <app-department-form [modal]="modal"></app-department-form>
+  </div>
+</app-modal>

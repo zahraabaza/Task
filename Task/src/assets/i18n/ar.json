@@ -1,0 +1,32 @@
+{
+  "employee":{
+    "name": "الاسم",
+    "phone": "الهاتف",
+    "mobile": "الموبايل",
+    "hireDate": "تاريخ التعيين",
+    "active": "نشط",
+    "position": "المنصب",
+    "Id": "هوية الموظف",
+    "departmentId": "القسم",
+    "add": "اضافة"
+  },
+  "department":{
+    "details": "التفاصيل",
+    "order": "الطلب"
+  },
+  "form":{
+    "save": "حفظ",
+    "cancel": "الغاء",
+    "options": "الخيارات",
+    "delete": "حذف",
+    "more": "المزيد من التفاصيل",
+    "edit": "تعديل"
+  },
+  "nav":{
+    "language": "اللغات",
+    "arabic": "العربية",
+    "english": "الانجليزية",
+    "departments": "الاقسام",
+    "employees": "الموظفين"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "employees": [
+    {
+      "id": 2,
+      "name": "ddosdp",
+      "employeeIdentification": "239203",
+      "phone": "2938293333",
+      "mobile": "01239483948",
+      "active": null,
+      "hireDate": "2023-11-29",
+      "departmentId": "1",
+      "position": "jfddf"
+    },
+    {
+      "id": 3,
+      "name": "fglfkg",
+      "employeeIdentification": "9340",
+      "phone": "0394949090",
+      "mobile": "01234348999",
+      "active": true,
+      "hireDate": "2023-12-06",
+      "departmentId": "1",
+      "position": "poss"
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "A",
+      "details": "note",
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "B",
+      "details": "lorem lorem",
+      "order": "90934",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "c",
+      "details": "erer",
+      "order": "3434",
+      "active": null
+    },
+    {
+      "id": 4,
+      "name": "E",
+      "details": "dlfd;f",
+      "order": 1334,
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "F",
+      "details": "flklgkflgkflgkfg",
+      "order": 39430,
+      "active": null
+    }
+  ]
+}
